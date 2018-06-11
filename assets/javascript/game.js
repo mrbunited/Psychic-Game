@@ -3,37 +3,51 @@
 
 var emptyString = "";
 var computerChoices = "abcdefghijklmnopqrstuvwxyz";
+var userGuess = "abcdefghijklmnopqrstuvwxyz";
 var getRandomLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 var randomLetter = getRandomLetter;
 console.log(getRandomLetter);
-var userGuess;
+
+
+// create an empty array for recording/storing all userGuesses
+var storeUserGuess =[];
+
 
 // // define win/loss counters
 var wins = 0;
 var losses = 0;
 
 
-// // function for user input
+// // function for user input  
+
 document.onkeyup = function(event){
     var userGuess = event.key;
-
-    if (userGuess === getRandomLetter) {
+ if (userGuess === getRandomLetter) {
         wins++;
     } else if (userGuess !== getRandomLetter)  {losses++ ;
     }
-   
+
+for (var i = 0; i < 1; i++) {
+    storeUserGuess.push(event.key);
+    console.log(storeUserGuess);
+
+ }  
 
 
+  
 // // loop for comparing user input and computer guess 9 times
 
-
+// 
+      
+     
+//       
 
 // // display results
 var html =
 "<p>The computer chose: " + getRandomLetter + "</p>" +
 "<p>wins: " + wins + "</p>" +
 "<p>losses: " + losses + "</p>" +
-"<p>You chose: " + userGuess + " ," + "</p>" ;
+"<p>You chose: " + storeUserGuess + " ," + "</p>" ;
 
 // // Set the inner HTML contents of the #game div to our html string
 document.querySelector("#game").innerHTML = html;
