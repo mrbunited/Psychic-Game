@@ -3,7 +3,7 @@
 
 var emptyString = "";
 var computerChoices = "abcdefghijklmnopqrstuvwxyz";
-var userGuess = "abcdefghijklmnopqrstuvwxyz";
+var userOption = "abcdefghijklmnopqrstuvwxyz";
 var getRandomLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 var randomLetter = getRandomLetter;
 console.log(getRandomLetter);
@@ -18,10 +18,17 @@ var wins = 0;
 var losses = 0;
 
 
+// function for emptying array
+
+
 // // function for user input  
+
+
 
 document.onkeyup = function(event){
     var userGuess = event.key;
+    if (userOption.indexOf(userGuess)!==-1){
+
  if (userGuess === getRandomLetter) {
         wins++;
     } else if (userGuess !== getRandomLetter)  {losses++ ;
@@ -32,7 +39,7 @@ for (var i = 0; i < 1; i++) {
     console.log(storeUserGuess);
 
  }  
-
+    }
 
   
 // // loop for comparing user input and computer guess 9 times
@@ -53,5 +60,3 @@ var html =
 document.querySelector("#game").innerHTML = html;
 
 };
-
-// loop for updating counters
