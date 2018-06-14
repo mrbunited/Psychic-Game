@@ -29,7 +29,7 @@ document.onkeyup = function(event){
       if (userGuessLower === getRandomLetter) {
         wins++; 
         guessesLeft =9;
-        storeUserGuess =[];
+        storeUserGuess = [];
         getRandomLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
     } else{guessesLeft--;
@@ -37,7 +37,7 @@ document.onkeyup = function(event){
     if (guessesLeft === 0)  {
         losses++ ;
         guessesLeft =9;
-        storeUserGuess =[];
+        storeUserGuess = [];
         getRandomLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     }
 
@@ -47,6 +47,8 @@ document.onkeyup = function(event){
     // console.log(storeUserGuess);
     }
 //  to fix: last pressed letter gets stuck in the userGuess line
+// fix: user cannot use the same letter
+
 
 // // display results
 var html =
