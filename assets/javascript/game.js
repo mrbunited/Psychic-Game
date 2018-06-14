@@ -27,7 +27,8 @@ document.onkeyup = function(event){
     if (userOption.indexOf(userGuessLower)!==-1)
 {
       if (userGuessLower === getRandomLetter) {
-        wins++; guessesLeft =9;
+        wins++; 
+        guessesLeft =9;
         storeUserGuess =[];
         getRandomLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
@@ -45,7 +46,7 @@ document.onkeyup = function(event){
 
     // console.log(storeUserGuess);
     }
- 
+//  to fix: last pressed letter gets stuck in the userGuess line
 
 // // display results
 var html =
